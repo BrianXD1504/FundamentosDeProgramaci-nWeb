@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("img/logo\ 2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial Black', sans-serif;
+  color: white;
+  text-shadow: 2px 2px 5px black; /* mejor contraste */
+}
+
+/* Botón de música */
+.musica {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  font-weight: bold;
+}
+.musica:hover {
+  transform: scale(1.1);
+}
+
+/* Título */
+.titulo {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 3px 3px 10px #ff0080; /* efecto gamer */
+}
+
+/* Contenedor de historias */
+.contenedor {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.historias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.historias img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.4); /* efecto transparente */
+  padding: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.historias img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+
+/* Redes sociales */
+.redes {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.redes img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.redes img:hover {
+  transform: scale(1.2);
+}
+
+/* 📱 Vista en móvil */
+@media (max-width: 768px) {
+  .redes {
+    position: fixed;
+    top: 70px; /* debajo del botón música */
+    left: 10px;
+    right: auto;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .redes img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .historias img {
+    width: 140px;
+  }
+}
+
+
